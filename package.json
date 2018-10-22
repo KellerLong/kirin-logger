@@ -1,6 +1,6 @@
 {
   "name": "kirin-logger",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "logger",
   "browser": "logger-web.js",
   "main": "logger-node.js",

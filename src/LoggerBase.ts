@@ -17,8 +17,8 @@ export default class LoggerBase {
     this.replaceFunction('error');
     this.replaceFunction('warn');
     this.replaceFunction('info');
-    this.replaceFunction('log');
     this.replaceFunction('debug');
+    this.replaceFunction('log');
   }
 
   private replaceFunction(name: string) {
