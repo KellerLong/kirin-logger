@@ -36,4 +36,5 @@ class LoggerWeb extends LoggerBase{
   }
 }
 
-new LoggerWeb();
+export const level = Level;
+export default new LoggerWeb();

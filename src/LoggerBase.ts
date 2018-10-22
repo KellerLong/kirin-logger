@@ -17,6 +17,7 @@ export default class LoggerBase {
     this.replaceFunction('error');
     this.replaceFunction('warn');
     this.replaceFunction('info');
+    this.replaceFunction('log');
     this.replaceFunction('debug');
   }
 
@@ -28,7 +29,12 @@ export default class LoggerBase {
     if ('fatal' === name) {
       outFunction = console.error;
     }
-    console[name] = (...msg) => outFunction(...this[name](...msg));
+
+    console[name] =  (...msg) => {
+      const content = this[name](...msg);
+      if (!content) { return false; }
+      outFunction(...content);
+    }
   }
 
   public getCurrentTime() {

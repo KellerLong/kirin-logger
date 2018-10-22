@@ -1,4 +1,6 @@
-require('../logger-node');
+const logger = require('../logger-node');
+
+logger.logger.level = logger.level.WARN;
 
 console.fatal('This is fatal');
 console.error('This is error');
