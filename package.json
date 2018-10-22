@@ -1,0 +1,26 @@
+{
+  "name": "kirin-logger",
+  "version": "1.0.0",
+  "description": "logger",
+  "browser": "logger-web.js",
+  "main": "logger-node.js",
+  "scripts": {
+    "build:debug": "NODE_ENV=development node webpack.config.js",
+    "build:pord": "NODE_ENV=production node webpack.config.js"
+  },
+  "keywords": [
+    "kirin",
+    "logger"
+  ],
+  "author": "Keller Long <kellerlong@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.12.0",
+    "ts-loader": "^5.2.2",
+    "typescript": "^3.1.3",
+    "webpack": "^4.20.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.7.7"
+  }
+}
