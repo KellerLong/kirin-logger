@@ -1,9 +1,9 @@
 const logger = require('../logger-node');
 
-logger.logger.level = logger.level.WARN;
+logger.logger.level = logger.level.DEBUG;
 
-console.fatal('This is fatal');
-console.error('This is error');
-console.warn('This is warn');
-console.info('This is info');
-console.debug('This is debug');
+logger.logger.fatal('This is fatal');
+logger.logger.error('This is error');
+logger.logger.warn('This is warn');
+logger.logger.info('This is info');
+logger.logger.debug('This is debug');

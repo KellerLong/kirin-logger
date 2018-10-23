@@ -8,22 +8,22 @@ class LoggerWeb extends LoggerBase{
 
   public fatal (...msg) {
     if ( this.level < Level.FATAL) { return false; }
-    return [`%c ${this.getCurrentTime()} %c ${Level[Level.FATAL]}`, 'color:red', 'color:red', ...msg];
+    return console.error(`%c ${this.getCurrentTime()} %c ${Level[Level.FATAL]}`, 'color:red', 'color:red', ...msg);
   }
 
   public error (...msg) {
     if ( this.level < Level.ERROR) { return false; }
-    return [`%c ${this.getCurrentTime()} %c ${Level[Level.ERROR]}`, 'color:red', 'color:red', ...msg];
+    return console.error(`%c ${this.getCurrentTime()} %c ${Level[Level.ERROR]}`, 'color:red', 'color:red', ...msg);
   }
 
   public warn (...msg) {
     if ( this.level < Level.WARN) { return false; }
-    return [`%c ${this.getCurrentTime()} %c ${Level[Level.WARN]} `, 'color:yellow', 'color:yellow', 'sfsdf', ...msg];
+    return console.warn(`%c ${this.getCurrentTime()} %c ${Level[Level.WARN]} `, 'color:yellow', 'color:yellow', 'sfsdf', ...msg);
   }
 
   public info (...msg) {
     if ( this.level < Level.INFO) { return false; }
-    return [`%c ${this.getCurrentTime()} %c ${Level[Level.INFO]} `, 'color:gray', 'color:blue', ...msg];
+    return console.info(`%c ${this.getCurrentTime()} %c ${Level[Level.INFO]} `, 'color:gray', 'color:blue', ...msg);
   }
 
   public log (...msg) {
@@ -32,7 +32,7 @@ class LoggerWeb extends LoggerBase{
 
   public debug (...msg) {
     if ( this.level < Level.DEBUG) { return false; }
-    return [`%c ${this.getCurrentTime()} %c ${Level[Level.DEBUG]}`, 'color:gray', 'color:cyan', ...msg];
+    return console.log(`%c ${this.getCurrentTime()} %c ${Level[Level.DEBUG]}`, 'color:gray', 'color:cyan', ...msg);
   }
 }
 

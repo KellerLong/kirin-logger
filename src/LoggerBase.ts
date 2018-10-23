@@ -13,28 +13,6 @@ export default class LoggerBase {
 
   public constructor (level: Level = Level.INFO) {
     this.level = level;
-    this.replaceFunction('fatal');
-    this.replaceFunction('error');
-    this.replaceFunction('warn');
-    this.replaceFunction('info');
-    this.replaceFunction('debug');
-    this.replaceFunction('log');
-  }
-
-  private replaceFunction(name: string) {
-    let outFunction = console[name] || console.log;
-    if ('debug' === name) {
-      outFunction = console.log;
-    }
-    if ('fatal' === name) {
-      outFunction = console.error;
-    }
-
-    console[name] =  (...msg) => {
-      const content = this[name](...msg);
-      if (!content) { return false; }
-      outFunction(...content);
-    }
   }
 
   public getCurrentTime() {
